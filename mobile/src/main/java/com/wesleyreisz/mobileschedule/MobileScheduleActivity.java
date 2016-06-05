@@ -94,10 +94,11 @@ public class MobileScheduleActivity extends AppCompatActivity {
         TextView textViewMessage = (TextView)findViewById(R.id.textViewCity);;
         textViewMessage.setText(
                 getIntent().getStringExtra(MobileScheduleConstants.SELECTED_CITY_MESSAGE) +
-                " " +
-                "Schedule"
+                        " " +
+                        "Schedule"
         );
         mContentView = textViewMessage;
+
 
         // Set up the user interaction to manually show or hide the system UI.
         mContentView.setOnClickListener(new View.OnClickListener() {

@@ -3,7 +3,9 @@
     <color name="colorPrimary">#00BFFF</color>
     <color name="colorBackground">#0099cc</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorTalk">#CC303F9F</color>
+    <color name="colorTalkAlternate">#32303F9F</color>
+    <color name="colorAccent">#88FF4081</color>
     <color name="colorText">#FFFFFF</color>
 
 
