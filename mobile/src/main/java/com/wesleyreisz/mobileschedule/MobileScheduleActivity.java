@@ -160,4 +160,19 @@ public class MobileScheduleActivity extends AppCompatActivity {
         mHideHandler.removeCallbacks(mHideRunnable);
         mHideHandler.postDelayed(mHideRunnable, delayMillis);
     }
+
+    public void showTrack(View view) {
+        Intent intent = new Intent(this, TrackActivity.class);
+        startActivity(intent);
+    }
+
+    public void showSession(View view) {
+        Intent intent = new Intent(this, TalkActivity.class);
+        startActivity(intent);
+}
+
+    public void showCalendar(View view) {
+        Intent intent = new Intent(this, MobileScheduleActivity.class);
+        startActivity(intent);
+    }
 }

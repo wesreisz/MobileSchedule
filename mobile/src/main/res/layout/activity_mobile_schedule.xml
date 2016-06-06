@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorBackground"
+    android:background="#ECF0F1"
     tools:context="com.wesleyreisz.mobileschedule.MobileScheduleActivity">
     <TextView
         android:id="@+id/textViewCity"
@@ -11,10 +11,9 @@
         android:layout_height="match_parent"
         android:gravity="center"
         android:keepScreenOn="true"
-        android:textColor="@color/colorPrimary"
+        android:textColor="#337F8C8D"
         android:textSize="50sp"
         android:textStyle="bold" />
-
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
@@ -36,6 +35,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:stretchColumns="1">
+                //time
                 <TableRow
                     android:background="@color/colorTalkAlternate">
                     <TextView
@@ -135,52 +135,169 @@
                         android:textColor="@color/colorText"
                         android:padding="3dip" />
                 </TableRow>
+
+                //keynote
                 <TableRow>
                     <TextView
-                        android:padding="5dp"
+                        android:padding="20dp"
                         android:paddingLeft="30dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
-                        android:background="@color/colorAccent"
+                        android:background="#331ABC9C"
                         android:textColor="@color/colorText"
                         android:text="Keynote"
                         />
                 </TableRow>
-                <TableRow
-                    android:layout_height="200px">
+                <TableRow>
                     <TextView
                         android:layout_span="1" />
                     <TextView
-                        android:padding="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingTop="20dp"
+                        android:paddingBottom="20dp"
                         android:layout_span="2"
                         android:layout_width="300px"
+                        android:onClick="showTrack"
                         android:gravity="center"
-                        android:background="@color/colorPrimaryDark"
                         android:textColor="@color/colorText"
+                        android:background="@color/colorTalk"
                         android:text="Eric Brewer\nMoving to Cloud Native"
                         />
                 </TableRow>
+
+                //track1
                 <TableRow>
                     <TextView
-                        android:padding="5dp"
+                        android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
-                        android:background="@color/colorAccent"
+                        android:background="#339B59B6"
                         android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
+                        android:onClick="showTrack"
+                        android:text="Track: Architectures You've Always Wondered About"
                         />
                 </TableRow>
                 <TableRow
-                    android:background="@color/colorTalkAlternate">
+                    >
                     <TextView
-                        android:layout_height="100px"
+                        android:layout_height="300px"
                         android:layout_span="3" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Apache Flink: War Stories from an Early Adopter"
+                        android:onClick="showSession"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        android:onClick="showSession"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        android:onClick="showSession"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        android:onClick="showSession"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        android:onClick="showSession"
+                        />
+                </TableRow>
+
+                //track2
+                <TableRow>
+                    <TextView
+                        android:padding="20dp"
+                        android:layout_span="24"
+                        android:layout_width="300px"
+                        android:gravity="left"
+                        android:onClick="showTrack"
+                        android:background="#332ECC71"
+                        android:textColor="@color/colorText"
+                        android:text="Track: Streaming Data @ Scale"
+                        />
+                </TableRow>
+                <TableRow
+                    >
+                    <TextView
+                        android:layout_height="300px"
+                        android:layout_span="3" />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:onClick="showSession"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -198,6 +315,8 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:onClick="showSession"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -215,6 +334,8 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -232,6 +353,8 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -249,32 +372,146 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
                         android:text="Kafka Streaming Design Goals"
                         />
                 </TableRow>
+
+                //track3
                 <TableRow>
                     <TextView
-                        android:padding="5dp"
+                        android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
+                        android:onClick="showTrack"
                         android:gravity="left"
-                        android:background="@color/colorAccent"
+                        android:background="#333498D8"
                         android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
+                        android:text="Track: Culture As A Differentiator"
                         />
                 </TableRow>
                 <TableRow
-                    android:background="@color/colorTalkAlternate">
+                    >
                     <TextView
-                        android:layout_height="100px"
+                        android:layout_height="300px"
                         android:layout_span="3" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Apache Flink: War Stories from an Early Adopter"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:onClick="showSession"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                </TableRow>
+
+                //track4
+                <TableRow>
+                    <TextView
+                        android:padding="20dp"
+                        android:layout_span="24"
+                        android:layout_width="300px"
+                        android:gravity="left"
+                        android:onClick="showTrack"
+                        android:background="#331ABC9C"
+                        android:textColor="@color/colorText"
+                        android:text="Track: Practical DevOps for Cloud Architectures"
+                        />
+                </TableRow>
+                <TableRow
+                    >
+                    <TextView
+                        android:layout_height="300px"
+                        android:layout_span="3" />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:onClick="showSession"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -292,6 +529,8 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -309,6 +548,27 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:onClick="showSession"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -326,49 +586,39 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
-                        android:gravity="center"
-                        android:background="@color/colorTalk"
-                        android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
                         android:text="Kafka Streaming Design Goals"
                         />
                 </TableRow>
+
+                //track5
                 <TableRow>
                     <TextView
-                        android:padding="5dp"
+                        android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
-                        android:background="@color/colorAccent"
+                        android:background="#332ECC71"
                         android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
+                        android:onClick="showTrack"
+                        android:text="Track: Incredible Power of an Open Source .NET"
                         />
                 </TableRow>
                 <TableRow
-                    android:background="@color/colorTalkAlternate">
+                    >
                     <TextView
-                        android:layout_height="100px"
+                        android:layout_height="300px"
                         android:layout_span="3" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:onClick="showSession"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -386,6 +636,8 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:onClick="showSession"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -403,6 +655,27 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:onClick="showSession"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
@@ -420,51 +693,41 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
-                        android:gravity="center"
-                        android:background="@color/colorTalk"
-                        android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                        android:onClick="showSession"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
                         android:text="Kafka Streaming Design Goals"
                         />
                 </TableRow>
+
+                //sponsored track
                 <TableRow>
                     <TextView
-                        android:padding="5dp"
+                        android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
+                        android:onClick="showTrack"
                         android:gravity="left"
-                        android:background="@color/colorAccent"
+                        android:background="#33E67E22"
                         android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
+                        android:text="Track: Sponsored Solutions I"
                         />
                 </TableRow>
                 <TableRow
-                    android:background="@color/colorTalkAlternate">
+                    >
                     <TextView
-                        android:layout_height="100px"
+                        android:layout_height="300px"
                         android:layout_span="3" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
+                        android:onClick="showSession"
                         android:textColor="@color/colorText"
                         android:text="Apache Flink: War Stories from an Early Adopter"
                         />
@@ -480,8 +743,29 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:onClick="showSession"
+                        android:text="Kafka Streaming Design Goals"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <TextView
+                        android:padding="5dp"
+                        android:layout_span="1"
+                        android:layout_width="300px"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@color/colorTalk"
+                        android:onClick="showSession"
                         android:textColor="@color/colorText"
                         android:text="Kafka Streaming Design Goals"
                         />
@@ -497,8 +781,10 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
+                        android:onClick="showSession"
                         android:textColor="@color/colorText"
                         android:text="Kafka Streaming Design Goals"
                         />
@@ -514,216 +800,114 @@
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
+                        android:layout_height="match_parent"
                         android:gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:background="@color/colorTalk"
-                        android:textColor="@color/colorText"
+                        android:onClick="showSession"
                         android:text="Kafka Streaming Design Goals"
                         />
                 </TableRow>
-                <TableRow>
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="24"
-                        android:layout_width="300px"
-                        android:gravity="left"
-                        android:background="@color/colorAccent"
-                        android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
-                        />
-                </TableRow>
+
+                //time
                 <TableRow
                     android:background="@color/colorTalkAlternate">
                     <TextView
-                        android:layout_height="100px"
-                        android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="8:00"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="9:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="10:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="11:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="12:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="13:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="14:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="15:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="17:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
-                </TableRow>
-                <TableRow>
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="24"
-                        android:layout_width="300px"
-                        android:gravity="left"
-                        android:background="@color/colorAccent"
-                        android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
-                        />
-                </TableRow>
-                <TableRow
-                    android:background="@color/colorTalkAlternate">
-                    <TextView
-                        android:layout_height="100px"
-                        android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="18:00"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="19:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="20:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="21:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="22:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
+                        android:text="23:00"
                         android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
+                        android:padding="3dip" />
                     <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
                         android:layout_width="300px"
                         android:gravity="center"
-                        android:background="@color/colorTalk"
+                        android:text="00:00"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:background="@color/colorTalk"
-                        android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="3dip" />
                 </TableRow>
             </TableLayout>
         </HorizontalScrollView>
