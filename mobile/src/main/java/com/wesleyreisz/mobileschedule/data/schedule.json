@@ -1,0 +1,74 @@
+{
+  "title":"QCon New York 2016 Mobile Schedule",
+  "version":"0.0.1",
+  "location":"New York",
+  "dates": "June 13-15, 2016",
+  "days":
+  [
+    {
+      "id":"day1",
+      "title":"Monday",
+      "date":"June 13th",
+      "talks":
+      [
+        { "id":"12345",
+          "slot":"1-1",
+          "title":"The Netflix API Platform for Server-Side Scripting",
+          "description":"The Netflix API is the front-door for almost all device/UI requests from 1000+ device types to the Netflix backends. It serves everything from movie and show recommendations, profile, sign-up, and A/B test related functionality, to bookmarks and licenses for playback. \n\nBecause all devices use this API, and because Netflix runs on devices of widely varying sizes and interaction models, it has served us well to enable a platform against which device teams write server-side scripts. Using Netflix as an example, the goal of this talk is to explore situations in which server-side scripting is a good solution for applications. I will describe our first approach, which uses Groovy scripts. I will detail how the scripts are uploaded and can make use of shared modules. This approach allows for high flexibility and performance as well as high developer velocity, at the expense of added risk of injecting scripts into running servers. I will then dive into a new approach that will isolate the scripts into their own containers without compromising the original goals and will allow teams to write scripts in node.js, a language that is more natural for them.",
+          "type":"session",
+          "track":"Architectures You've Always Wondered About",
+          "location":"Salon D",
+          "duration":"10:35 - 11:25am",
+          "level":"Intermediate",
+          "persona":["Architect","CTO/CIO/Leadership"],
+          "tags":["API","Netflix","Scripting","Architecture","Interview Available"],
+          "key-takeaways":
+          [ "Join the discussion on the current thinking for Netflix’s APIs as they continue to evolve to still be more scalable and resilient.",
+            "Learn the Netflix use case for leveraging containers with the Next Gen API Architecture.",
+            "Understand some of the constraints of Netflix’s current API solution and how they are working to move it to the next level."
+          ],
+          "questions": [
+            {
+              "question": "What’s the motivation for your talk?",
+              "answer": "I will present what thinking is currently going into Netflix’s next generation architecture for API. Our API runs at a very large scale and is responsible for the large majority of the requests that come from devices to Netflix backend services. As such, it needs to both be scalable but also very resilient. If the devices can’t reach the back end services, that is a big problem. Today, we have a very flexible system that allows for a lot of developer velocity and has really served us well. But as our reach and traffic grows, we are now thinking about the next generation.\n\nThe way the system stands today it presents operational risks that we have identified and we are working hard to combat. The motivation for the talk is to talk about our thinking for the next generation of our API, get feedback, and have the chance to talk with other people who are thinking in the same space."
+            },
+            {
+              "question": "What is the current scale for your API’s?",
+              "answer": "Without sharing any of specific RPS numbers, our download is about 36% at peak in the US now but our upload percentage is something like 10%. The majority of that flows with the API’s, so it is certainly high scale. We run globally across the world."
+            },
+            {
+              "question": "You mentioned the words \"next gen architecture\" for your API edge. The first generation, a few years at least, was the injection of groovy scripts into the edge. This talk isn’t about that architecture right? We are talking about the next generation beyond that?",
+              "answer": "That's right. Our first generation was actually a REST architecture. And then what I will call \"the second generation\" is the groovy script injection that you were referring to. For us, the next generation is going to be moving those groovy scripts out into their own layer. They will actually not necessarily be groovy scripts anymore. In fact, what we are targeting first is Node. The way this will work is that the Node scripts will run in their own containers. They will be scaled separately and have process isolation so they will no longer put each other or API at any operational risk. They will talk to our API via something that is called Falcor which is a convenient way to access and cache data."
+            }
+          ],
+          "speaker":
+          [
+            {
+              "id":"12345",
+              "name":"Katharina Probst",
+              "minibio":"Engineering Manager @Netflix",
+              "description":"Katharina Probst is an Engineering Manager at Netflix, where she leads the API team and helps bring Netflix streaming to millions of people around the world. Prior to joining Netflix, she was in the cloud computing team at Google, where she saw cloud computing from the provider side. Her interests include scalable, distributed systems, APIs, cloud computing, and building effective and successful teams. She also holds a PhD in Computer Science from Carnegie Mellon University.",
+              "social-media": [
+                {
+                  "name":"Speaker-Page",
+                  "type":"URL",
+                  "value":"https://qconnewyork.com/ny2016/speakers/katharina-probst"
+                },
+                {
+                  "name":"Linkedin",
+                  "type":"URL",
+                  "value":"https://www.linkedin.com/in/katharinaprobst"
+                },
+                {
+                  "name":"Twitter",
+                  "type":"HANDLE",
+                  "value":"@katharinaprobst"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
