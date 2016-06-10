@@ -32,7 +32,7 @@ public class TalkCell extends LinearLayout {
             ((TextView) findViewById(R.id.textTalkTitle)).setText(textTalkTitle);
 
             String textSpeakerName = array.getString(R.styleable.TalkCell_speakerName);
-            if (textSpeakerName == null) textTalkTitle = "No Title Set";
+            if (textSpeakerName == null) textSpeakerName = "";
             ((TextView) findViewById(R.id.textSpeakerName)).setText(textSpeakerName);
 
             array.recycle();

@@ -38,116 +38,118 @@
                 android:stretchColumns="1">
                 //time
                 <TableRow
-                    android:background="@color/colorTalkAlternate">
+                    android:background="@color/black_overlay">
                     <TextView
                         android:layout_width="300px"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:gravity="center"
                         android:text="8:00"
-                        android:textColor="@color/colorText"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="9:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="10:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="11:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="12:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="13:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="14:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="15:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="17:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="18:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="19:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="20:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="21:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="22:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="23:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="00:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                 </TableRow>
 
                 //keynote
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
-                        android:onClick="showTrack"
                         android:background="#331ABC9C"
                         android:textColor="@color/colorText"
-                        android:text="Keynote"
+                        android:onClick="showTrack"
+
+                        schedule:trackImage="@drawable/ic_setting_dark"
+                        schedule:text="Day 1 Keynotes and Events"
                         />
                 </TableRow>
                 <TableRow
@@ -166,11 +168,36 @@
 
                         schedule:talkTitle="Continuousness Cloud Native Architectures"
                         schedule:speakerName="Eric Brewer" />
+                    <TextView
+                        android:layout_height="300px"
+                        android:layout_span="10" />
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Engineering the Red Planet"
+                        schedule:speakerName="Anita Sengupta" />
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="200dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="QCon New York Social"
+                        schedule:speakerName="Hill Country BBQ" />
                 </TableRow>
 
                 //track1
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
@@ -178,7 +205,9 @@
                         android:background="#339B59B6"
                         android:textColor="@color/colorText"
                         android:onClick="showTrack"
-                        android:text="Track: Architectures You've Always Wondered About"
+
+                        schedule:trackImage="@android:drawable/ic_menu_compass"
+                        schedule:text="Architectures You've Always Wondered About"
                         />
                 </TableRow>
                 <TableRow
@@ -273,39 +302,23 @@
 
                         schedule:talkTitle="Test Talk Test Talk"
                         schedule:speakerName="John Smith" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:gravity="center"
-                        android:textColor="@color/colorText"
-                        android:text="Break"
-                        />
-                    <com.wesleyreisz.mobileschedule.TalkCell
-                        android:layout_width="100dp"
-                        android:layout_height="match_parent"
-                        android:layout_gravity="center"
-                        android:background="@color/colorTalk"
-                        android:textColor="@color/colorText"
-                        android:padding="5px"
-                        android:onClick="showSession"
-
-                        schedule:talkTitle="Test Talk Test Talk"
-                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //track2
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
-                        android:onClick="showTrack"
                         android:background="#332ECC71"
                         android:textColor="@color/colorText"
-                        android:text="Track: Streaming Data @ Scale"
+                        android:onClick="showTrack"
+
+                        schedule:trackImage="@android:drawable/ic_dialog_email"
+                        schedule:text="Streaming Data @ Scale"
                         />
+
                 </TableRow>
                 <TableRow
                     >
@@ -403,15 +416,17 @@
 
                 //track3
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
-                        android:onClick="showTrack"
                         android:gravity="left"
                         android:background="#333498D8"
                         android:textColor="@color/colorText"
-                        android:text="Track: Culture As A Differentiator"
+                        android:onClick="showTrack"
+
+                        schedule:trackImage="@android:drawable/ic_dialog_info"
+                        schedule:text="Culture As A Differentiator"
                         />
                 </TableRow>
                 <TableRow
@@ -510,16 +525,17 @@
 
                 //track4
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
-                        android:onClick="showTrack"
                         android:background="#331ABC9C"
                         android:textColor="@color/colorText"
-                        android:text="Track: Practical DevOps for Cloud Architectures"
-                        />
+                        android:onClick="showTrack"
+
+                        schedule:trackImage="@android:drawable/ic_menu_day"
+                        schedule:text="Practical DevOps for Cloud Architectures"/>
                 </TableRow>
                 <TableRow
                     >
@@ -617,7 +633,7 @@
 
                 //track5
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
@@ -625,7 +641,9 @@
                         android:background="#332ECC71"
                         android:textColor="@color/colorText"
                         android:onClick="showTrack"
-                        android:text="Track: Incredible Power of an Open Source .NET"
+
+                        schedule:trackImage="@android:drawable/ic_menu_directions"
+                        schedule:text="Incredible Power of an Open Source .NET"
                         />
                 </TableRow>
                 <TableRow
@@ -724,15 +742,17 @@
 
                 //sponsored track
                 <TableRow>
-                    <TextView
+                    <com.wesleyreisz.mobileschedule.TrackCell
                         android:padding="20dp"
                         android:layout_span="24"
                         android:layout_width="300px"
-                        android:onClick="showTrack"
                         android:gravity="left"
                         android:background="#33E67E22"
                         android:textColor="@color/colorText"
-                        android:text="Track: Sponsored Solutions I"
+                        android:onClick="showTrack"
+
+                        schedule:trackImage="@android:drawable/ic_menu_compass"
+                        schedule:text="Sponsored Solutions I"
                         />
                 </TableRow>
                 <TableRow
@@ -831,104 +851,105 @@
 
                 //time
                 <TableRow
-                    android:background="@color/colorTalkAlternate">
+                    android:background="@color/black_overlay">
                     <TextView
                         android:layout_width="300px"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:gravity="center"
                         android:text="8:00"
-                        android:textColor="@color/colorText"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="9:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="10:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="11:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="12:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="13:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="14:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="15:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="17:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="18:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="19:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="20:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="21:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="22:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="23:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                     <TextView
                         android:layout_width="300px"
                         android:gravity="center"
                         android:text="00:00"
-                        android:textColor="@color/colorText"
+                        android:textColor="@color/common_action_bar_splitter"
                         android:padding="3dip" />
                 </TableRow>
+
             </TableLayout>
         </HorizontalScrollView>
     </ScrollView>
