@@ -1,5 +1,6 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:schedule="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -140,31 +141,31 @@
                 <TableRow>
                     <TextView
                         android:padding="20dp"
-                        android:paddingLeft="30dp"
                         android:layout_span="24"
                         android:layout_width="300px"
                         android:gravity="left"
+                        android:onClick="showTrack"
                         android:background="#331ABC9C"
                         android:textColor="@color/colorText"
                         android:text="Keynote"
                         />
                 </TableRow>
-                <TableRow>
+                <TableRow
+                    >
                     <TextView
+                        android:layout_height="300px"
                         android:layout_span="1" />
-                    <TextView
-                        android:paddingLeft="5dp"
-                        android:paddingRight="5dp"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="20dp"
-                        android:layout_span="2"
-                        android:layout_width="300px"
-                        android:onClick="showTrack"
-                        android:gravity="center"
-                        android:textColor="@color/colorText"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
-                        android:text="Eric Brewer\nMoving to Cloud Native"
-                        />
+                        android:textColor="@color/colorText"
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Continuousness Cloud Native Architectures"
+                        schedule:speakerName="Eric Brewer" />
                 </TableRow>
 
                 //track1
@@ -185,17 +186,17 @@
                     <TextView
                         android:layout_height="300px"
                         android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        />
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -204,17 +205,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        />
+
+                        schedule:talkTitle="This is my talk... it is only a talk."
+                        schedule:speakerName="Wesley Reisz" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -223,17 +224,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        />
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -242,17 +243,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        />
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -261,17 +262,36 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:background="@color/colorTalk"
+                        android:textColor="@color/colorText"
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
                         android:layout_width="300px"
-                        android:layout_height="match_parent"
                         android:gravity="center"
+                        android:textColor="@color/colorText"
+                        android:text="Break"
+                        />
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        />
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //track2
@@ -292,17 +312,17 @@
                     <TextView
                         android:layout_height="300px"
                         android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:onClick="showSession"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -311,17 +331,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:onClick="showSession"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -330,17 +350,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -349,17 +369,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -368,17 +388,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //track3
@@ -399,17 +419,17 @@
                     <TextView
                         android:layout_height="300px"
                         android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -418,17 +438,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:onClick="showSession"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -437,17 +457,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -456,17 +476,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -475,17 +495,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //track4
@@ -506,17 +526,17 @@
                     <TextView
                         android:layout_height="300px"
                         android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:onClick="showSession"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -525,17 +545,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -544,17 +564,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:onClick="showSession"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -563,17 +583,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -582,17 +602,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //track5
@@ -613,17 +633,17 @@
                     <TextView
                         android:layout_height="300px"
                         android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:onClick="showSession"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -632,17 +652,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:onClick="showSession"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -651,17 +671,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -670,17 +690,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:onClick="showSession"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -689,17 +709,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
-                        android:onClick="showSession"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //sponsored track
@@ -720,17 +740,17 @@
                     <TextView
                         android:layout_height="300px"
                         android:layout_span="3" />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
-                        android:onClick="showSession"
                         android:textColor="@color/colorText"
-                        android:text="Apache Flink: War Stories from an Early Adopter"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -739,17 +759,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -758,17 +778,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
-                        android:onClick="showSession"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -777,17 +797,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
-                        android:onClick="showSession"
                         android:textColor="@color/colorText"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+                        android:padding="5px"
+                        android:onClick="showSession"
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                     <TextView
                         android:padding="5dp"
                         android:layout_span="1"
@@ -796,17 +816,17 @@
                         android:textColor="@color/colorText"
                         android:text="Break"
                         />
-                    <TextView
-                        android:padding="5dp"
-                        android:layout_span="1"
-                        android:layout_width="300px"
+                    <com.wesleyreisz.mobileschedule.TalkCell
+                        android:layout_width="100dp"
                         android:layout_height="match_parent"
-                        android:gravity="center"
+                        android:layout_gravity="center"
                         android:background="@color/colorTalk"
                         android:textColor="@color/colorText"
+                        android:padding="5px"
                         android:onClick="showSession"
-                        android:text="Kafka Streaming Design Goals"
-                        />
+
+                        schedule:talkTitle="Test Talk Test Talk"
+                        schedule:speakerName="John Smith" />
                 </TableRow>
 
                 //time

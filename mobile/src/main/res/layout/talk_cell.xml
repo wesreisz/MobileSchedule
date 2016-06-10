@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/textTalkTitle"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_medium"
+        />
+    <TextView
+        android:id="@+id/textSpeakerName"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#34495E"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_small"
+        android:textStyle="bold"
+        />
+</merge>

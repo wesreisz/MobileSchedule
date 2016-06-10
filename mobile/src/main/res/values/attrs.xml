@@ -9,4 +9,9 @@
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
 
+    <declare-styleable name="TalkCell">
+        <attr name="talkTitle" format="string" />
+        <attr name="speakerName" format="string" />
+    </declare-styleable>
+
 </resources>
